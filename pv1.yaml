@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+ name: pv1
+spec:
+ storageClassName: fujitsu
+# persistentVolumeReclaimPolicy: Delete
+ accessModes:
+ - ReadWriteMany
+ capacity:
+  storage: 10Gi
+ hostPath:
+  path: /bujji
